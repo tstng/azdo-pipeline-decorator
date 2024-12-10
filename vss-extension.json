@@ -1,0 +1,43 @@
+{
+    "manifestVersion": 1,
+    "id": "abermusa-pipeline-decorator",
+    "name": "Ejemplo de un Decorador de Pipelines",
+    "publisher": "abermusa",
+    "version": "1.0.1",
+    "categories": [
+      "Azure Pipelines"
+    ],
+    "targets": [
+      {
+        "id": "Microsoft.VisualStudio.Services"
+      }
+    ],
+    "files": [
+      {
+        "path": "decorators"
+      }
+    ],
+    "contributions": [
+      {
+        "id": "pre-job-decorator",
+        "type": "ms.vss-pipelines.task-pipeline-decorator",
+        "targets": [
+          "ms.vss-pipelines.agent-job.pre"
+        ],
+        "properties": {
+          "template": "decorators/pre-job-template.yaml"
+        }
+      },
+      {
+        "id": "post-job-decorator",
+        "type": "ms.vss-pipelines.task-pipeline-decorator",
+        "targets": [
+          "ms.vss-pipelines.agent-job.post"
+        ],
+        "properties": {
+          "template": "decorators/post-job-template.yaml"
+        }
+      }
+    ]
+  }
+  
