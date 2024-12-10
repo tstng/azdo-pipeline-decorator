@@ -1,12 +1,15 @@
 {
     "manifestVersion": 1,
     "id": "abermusa-pipeline-decorator",
-    "name": "Ejemplo de un Decorador de Pipelines",
+    "name": "Decorador de Pipelines",
     "publisher": "abermusa",
-    "version": "1.0.1",
+    "version": "1.0.5",
     "categories": [
       "Azure Pipelines"
     ],
+    "icons": {
+      "default": "images/icon.jpeg"
+    },
     "targets": [
       {
         "id": "Microsoft.VisualStudio.Services"
