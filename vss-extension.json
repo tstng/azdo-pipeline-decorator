@@ -3,7 +3,7 @@
     "id": "abermusa-pipeline-decorator",
     "name": "Decorador de Pipelines",
     "publisher": "abermusa",
-    "version": "1.0.5",
+    "version": "1.0.12",
     "categories": [
       "Azure Pipelines"
     ],
@@ -15,30 +15,40 @@
         "id": "Microsoft.VisualStudio.Services"
       }
     ],
+    "content": {
+        "details": {
+            "path": "overview.md"
+        }
+    },
     "files": [
       {
-        "path": "decorators"
+        "path": "decorators/pre-job-template.yml",
+        "contentType": "text/plain"
+      },
+      {
+        "path": "decorators/post-job-template.yml",
+        "contentType": "text/plain"
       }
     ],
     "contributions": [
       {
         "id": "pre-job-decorator",
-        "type": "ms.vss-pipelines.task-pipeline-decorator",
+        "type": "ms.azure-pipelines.pipeline-decorator",
         "targets": [
-          "ms.vss-pipelines.agent-job.pre"
+          "ms.azure-pipelines-agent-job.post-checkout-tasks"
         ],
         "properties": {
-          "template": "decorators/pre-job-template.yaml"
+          "template": "decorators/pre-job-template.yml"
         }
       },
       {
         "id": "post-job-decorator",
-        "type": "ms.vss-pipelines.task-pipeline-decorator",
+        "type": "ms.azure-pipelines.pipeline-decorator",
         "targets": [
-          "ms.vss-pipelines.agent-job.post"
+          "ms.azure-pipelines-agent-job.post-job-tasks"
         ],
         "properties": {
-          "template": "decorators/post-job-template.yaml"
+          "template": "decorators/post-job-template.yml"
         }
       }
     ]
