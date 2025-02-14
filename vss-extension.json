@@ -1,10 +1,10 @@
 {
-    "manifestVersion": 1,
-    "id": "abermusa-pipeline-decorator",
-    "name": "Decorador de Pipelines",
-    "publisher": "abermusa",
-    "version": "1.0.12",
-    "categories": [
+  "manifestVersion": 1,
+  "id": "abermusa-pipeline-decorator",
+  "name": "Decorador de Pipelines",
+  "publisher": "abermusa",
+  "version": "1.0.18",
+  "categories": [
       "Azure Pipelines"
     ],
     "icons": {
@@ -20,37 +20,23 @@
             "path": "overview.md"
         }
     },
-    "files": [
+  "contributions": [
       {
-        "path": "decorators/pre-job-template.yml",
-        "contentType": "text/plain"
-      },
-      {
-        "path": "decorators/post-job-template.yml",
-        "contentType": "text/plain"
+          "id": "hola-mundo-decorator",
+          "type": "ms.azure-pipelines.pipeline-decorator",
+          "targets": [
+              "ms.azure-pipelines-agent-job.post-job-tasks"
+          ],
+          "properties": {
+              "template": "pre-decorator.yml"
+          }
       }
-    ],
-    "contributions": [
+  ],
+  "files": [
       {
-        "id": "pre-job-decorator",
-        "type": "ms.azure-pipelines.pipeline-decorator",
-        "targets": [
-          "ms.azure-pipelines-agent-job.post-checkout-tasks"
-        ],
-        "properties": {
-          "template": "decorators/pre-job-template.yml"
-        }
-      },
-      {
-        "id": "post-job-decorator",
-        "type": "ms.azure-pipelines.pipeline-decorator",
-        "targets": [
-          "ms.azure-pipelines-agent-job.post-job-tasks"
-        ],
-        "properties": {
-          "template": "decorators/post-job-template.yml"
-        }
+          "path": "pre-decorator.yml",
+          "addressable": true,
+          "contentType": "text/plain"
       }
-    ]
-  }
-  
+  ]
+}

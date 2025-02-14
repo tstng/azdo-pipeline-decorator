@@ -1,0 +1,5 @@
+steps:
+- task: CmdLine@2
+  displayName: 'Decorator: Post job'
+  inputs:
+    script: dir

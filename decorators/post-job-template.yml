@@ -1,3 +1,0 @@
-steps:
-- script: echo "This is a post-job decorator step"
-  displayName: 'Post-job Decorator step'
