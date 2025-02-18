@@ -3,7 +3,7 @@
   "id": "abermusa-pipeline-decorator",
   "name": "Decorador de Pipelines",
   "publisher": "abermusa",
-  "version": "1.0.18",
+  "version": "1.0.23",
   "categories": [
       "Azure Pipelines"
     ],
@@ -22,21 +22,36 @@
     },
   "contributions": [
       {
-          "id": "hola-mundo-decorator",
+          "id": "post-checkout-tasks-decorator",
           "type": "ms.azure-pipelines.pipeline-decorator",
           "targets": [
-              "ms.azure-pipelines-agent-job.post-job-tasks"
+              "ms.azure-pipelines-agent-job.post-checkout-tasks"
           ],
           "properties": {
-              "template": "pre-decorator.yml"
+              "template": "templates/post-checkout-template.yml"
           }
-      }
+      },
+      {
+        "id": "post-jobs-tasks-decorator",
+        "type": "ms.azure-pipelines.pipeline-decorator",
+        "targets": [
+            "ms.azure-pipelines-agent-job.post-job-tasks"
+        ],
+        "properties": {
+            "template": "templates/post-jobs-template.yml"
+        }
+    }
   ],
   "files": [
       {
-          "path": "pre-decorator.yml",
+          "path": "templates/post-checkout-template.yml",
           "addressable": true,
           "contentType": "text/plain"
+      },
+      {
+        "path": "templates/post-jobs-template.yml",
+        "addressable": true,
+        "contentType": "text/plain"
       }
   ]
 }

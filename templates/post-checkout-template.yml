@@ -1,5 +1,5 @@
 steps:
 - task: CmdLine@2
-  displayName: 'Decorator: Post job'
+  displayName: 'Decorator: Post Checkout'
   inputs:
     script: dir
