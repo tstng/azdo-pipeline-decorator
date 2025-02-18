@@ -1,9 +1,9 @@
 {
   "manifestVersion": 1,
-  "id": "abermusa-pipeline-decorator",
+  "id": "azdo-pipeline-decorator",
   "name": "Decorador de Pipelines",
-  "publisher": "abermusa",
-  "version": "1.0.23",
+  "publisher": "tstng",
+  "version": "1.0.25",
   "categories": [
       "Azure Pipelines"
     ],
