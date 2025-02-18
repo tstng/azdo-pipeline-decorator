@@ -1,6 +1,7 @@
-## Archivo README: Probando Pipelines Decorator para Azure Pipelines
+## Pipelines Decorator para Azure Pipelines
 
 Esta es una prueba para pipelines decorators.
+[Author Pipeline Decorator]([https://](https://learn.microsoft.com/en-us/azure/devops/extend/develop/add-pipeline-decorator?view=azure-devops))
 
 ## Compilación
 
