@@ -3,7 +3,7 @@
   "id": "azdo-pipeline-decorator",
   "name": "Decorador de Pipelines",
   "publisher": "tstng",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "categories": [
       "Azure Pipelines"
     ],
